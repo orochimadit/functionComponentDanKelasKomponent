@@ -10,9 +10,9 @@ export default class App extends Component{
     return(
       <View>
         <StatusBar backgroundColor="blue"/>
-        <Header/>
+        <Header person="ini adalah props person"/>
         <Text>First APp</Text>
-        <Footer/>
+        <Footer tahun="2019"/>
       </View>
     );
   }

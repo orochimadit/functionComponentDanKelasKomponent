@@ -3,7 +3,7 @@ import {Text} from "react-native";
 
  class Header extends Component{
     render(){
-      return<Text>Ini adalah header1</Text>
+      return<Text>Ini adalah header1 {this.props.person}</Text>
     }
   }
 
