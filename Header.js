@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import {Text} from "react-native";
+import {Text,TextInput,View} from "react-native";
 
 
  class Header extends Component{
@@ -7,11 +7,23 @@ import {Text} from "react-native";
    constructor(props){
      super(props);
      this.state= {
-      umur:this.props.usia
+      umur:this.props.usia,
+      inputan:""
     }
    }
+   handleInput=(events)=>{
+    this.setState({inputan:events})
+   }
     render(){
-      return<Text>{this.props.person}  {this.state.umur}</Text>
+      return(
+      <View>
+      <Text>{this.props.person}  {this.state.umur}</Text>
+      <TextInput onChangeText={this.handleInput} 
+      placeholder="masukkan Inputan"
+      value={this.state.inputan}/>
+      <Text>ini adalah text : {this.state.inputan}</Text>
+      </View>
+      )
     }
   }
 
