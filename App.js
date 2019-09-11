@@ -10,7 +10,8 @@ export default class App extends Component{
     return(
       <View>
         <StatusBar backgroundColor="blue"/>
-        <Header person="ini adalah props person"/>
+        <Header person="Nama : Badra"/>
+        <Header usia="Usia : 25"/>
         <Text>First APp</Text>
         <Footer tahun="2019"/>
       </View>
