@@ -1,5 +1,11 @@
 import React , {Component } from 'react';
-import {Button, Alert,Text,View,StatusBar} from "react-native";
+import {
+  Button,
+   Alert,
+   Text,
+   View,
+   StatusBar,
+  StyleSheet} from "react-native";
 import Header from "./Header";
 import Footer from "./Footer"
 //belajar function component 
@@ -23,12 +29,26 @@ export default class App extends Component{
     return(
       <View>
         <StatusBar backgroundColor="blue"/>
+        <Text style={styles.header}>First APp</Text>
         <Header person="Nama : Badra"/>
-        <Text>First APp</Text>
+        
         <Footer tahun="2019"/>
         <Button title="Button tambah" onPress={this.handleTambah} />
-        <Text>Jumlah : {this.state.jumlah}</Text>
+        <Text style={styles.jumlah}>Jumlah : {this.state.jumlah}</Text>
       </View>
     );
   }
 }
+const styles =StyleSheet.create({
+  header:{
+    marginTop:20,
+    fontSize:20,
+    textAlign:"center"
+  },
+  jumlah:{
+    fontSize:20,
+    marginTop:30,
+    textAlign:"center",
+    color:"red"
+  }
+})
